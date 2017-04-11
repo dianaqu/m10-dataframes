@@ -11,13 +11,14 @@ is.data.frame(USPersonalExpenditure)
 # to convert it a data.farme
 
 # Create a new variable by passing the USPersonalExpenditure to the data.frame function
-us.exp <- data.frame(USPersonalExpenditure)
+us.exp <- data.frame(USPersonalExpenditure, stringsAsFactors = FALSE)
 
 # What are the column names of your dataframe?
 colnames(us.exp)
 
 # Why are they so strange?
-
+# there are X in front of year right now. Why?
+# can't store number in colname
 
 # What are the row names of your dataframe?
 rownames(us.exp)
@@ -41,8 +42,9 @@ highest.1960 <- us.exp$category[us.exp$X1960 == max(us.exp$X1960)]
 # Write a function that takes in a year as a parameter, and 
 # returns the highest spending category of that year
 DetectHighest <- function(year) {
+  #print(year)
   return (us.exp$category[us.exp[year] == max(us.exp[year])])
-  # return (us.exp$category[us.exp$'year' == max(us.exp$'year')])
+  #print(us.exp$category[us.exp$year == max(us.exp$year)])
   # why not this. why use [] here.
 }
 
