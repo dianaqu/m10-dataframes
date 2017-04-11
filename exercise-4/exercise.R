@@ -23,13 +23,12 @@ org <- grants$organization
 grant.mean <- mean(spending)
 
 # What was the dollar amount of the largest grant?
-
+highest.amount <- max(spending)
 
 # What was the dollar amount of the smallest grant?
-
+lowest <- min(spending)
 
 # Which organization received the largest grant?
-
 
 # Which organization received the smallest grant?
 
